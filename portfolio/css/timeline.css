@@ -13,10 +13,10 @@ body, html {
 .main a{
 	color:#0085a1;
 }
-.main a:hover {
-	/*color: #000;*/
-	/*text-decoration: none;*/
-}
+/* .main a:hover {
+	color: #000;
+	text-decoration: none;
+} */
 
 .main, .container > header {
 	width: 90%;
@@ -154,12 +154,12 @@ body, html {
     background-size: 20px;
 }
 
-.i-kissy:before {
+.i-nodejs:before {
 	content: "";
 	display: block;
 	width: 40px;
 	height: 40px;
-	background: url("../images/logo-kissy.png") 50% 50% no-repeat;
+	background: url("../images/logo-nodejs.png") 50% 50% no-repeat;
 	background-size: 20px;
 }
 
@@ -172,16 +172,34 @@ body, html {
 	background-size: 20px;
 }
 
-.i-react:before {
+.i-mongodb:before {
 	content: "";
 	display: block;
 	width: 40px;
 	height: 40px;
-	background: url("../images/logo-react.png") 50% 50% no-repeat;
+	background: url("../images/logo-mongodb.png") 50% 50% no-repeat;
 	background-size: 22px;
 }
 
-/******* Hux Branch *****/
+.i-bootstrap:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-bootstrap.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+.i-bootstrap-vue:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-bootstrap-vue.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+/******* Rushan Branch *****/
 
 /* navbar - dark mode */
 .navbar-custom .nav li a,

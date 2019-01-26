@@ -1,16 +1,18 @@
 ---
 layout: page
 title: "About"
-description: "你是我的梦想"
-header-img: "img/about-bg.jpg"
+description: "Unknown things make me so 'stupid', but I'll change."
+header-img: "img/about-bg-kid.jpg"
+header-img-credit: "Photo by Caleb Woods on Unsplash"
+header-img-credit-href: "https://unsplash.com/photos/VZILDYoqn_U"
 multilingual: true
 ---
 
 <!-- Language Selector -->
-<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
     <option value="0" selected> 中文 Chinese </option>
     <option value="1"> 英文 English </option>
-</select>
+</select> -->
 
 <!-- Chinese Version -->
 <div class="zh post-container">
@@ -19,10 +21,10 @@ multilingual: true
 </div>
 
 <!-- English Version -->
-<div class="en post-container">
+<!-- <div class="en post-container">
     {% capture about_en %}{% include about/en.md %}{% endcapture %}
     {{ about_en | markdownify }}
-</div>
+</div> -->
 
 
 {% if site.disqus_username %}

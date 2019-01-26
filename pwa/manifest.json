@@ -1,13 +1,13 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Rushan Blog",
+  "short_name": "Rushan Blog",
+  "description": "About a kid who is exploring the magic world of Programming.",
   "icons": [{
-    "src": "icons/128.png",
+    "src": "icons/R-logo-128.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {
-    "src": "icons/512.png",
+    "src": "icons/R-logo-512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
