@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ramda math相关方法"
-subtitle: "About "
+subtitle: "Ramda: math methods"
 author: "Rushan"
 header-img: "img/post-bg-default-blue.jpg"
 header-img-credit: "Photo by Matteo Fusco on Unsplash"
