@@ -12,7 +12,10 @@ tags:
   - Ramda
 ---
 
-继上篇[Ramda 常用方法](/2018/12/05/ramda-frequently-use-methods/)后，这篇是一些数学方面的一些方法。
+Ramda，一个超好用超棒的函数式编程第三方库，这篇是一些数学方面的一些方法。
+
+- [Ramda](http://ramdajs.com/docs/)
+- [Ramda(中文)](http://ramda.cn/docs/)
 
 ```js
 const R = require('ramda');
