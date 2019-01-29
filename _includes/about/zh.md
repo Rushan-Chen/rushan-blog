@@ -4,6 +4,6 @@
 
 Hey，我是陈如珊，魔法世界新人，想成为前端魔法师。
 
-常常惊叹，“what? 哪里出问题了？”、“哇~ 原来是这样啊~（出去走走果然有效）”，经常探望MDN、Github、Stack Overflow和各位亲爹文档。
+经常探望MDN、Github、Stack Overflow和各位亲爹文档。
 
 一些小作品，请戳 👉 [Portfolio](/portfolio)、[Github](https://github.com/Rushan-Chen)。
