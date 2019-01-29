@@ -14,7 +14,7 @@ tags:
   - async/await
 ---
 
-注：本文是主要是整理记录了xugaoyang的讲解。
+注：本文是主要是整理记录了[xugaoyang](https://github.com/xugy0926)的讲解。
 
 ## 回调函数 深度嵌套
 

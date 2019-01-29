@@ -51,7 +51,7 @@ myObject.func();
 👉 再复习下IIFE(立即执行函数表达式):
 
 - [Immediately-Invoked Function Expression (IIFE) — Ben Alman ](http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)
-- [IIFE 立即执行函数表达式](https://github.com/Rushan-Chen/JavaScript/blob/master/note/IIFE.md)（放个笔记哈哈）
+- [IIFE 立即执行函数表达式](/2018/11/20/IIFE/)
 
 😜 也可以先看分析再回头复习，哈哈~
 
