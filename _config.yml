@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: Rushan-Chen
+#disqus_username: Rushan-Chen
 
 # Netease settings
 netease_comment: false
@@ -71,8 +71,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-#ga_track_id: 'UA-xxxxxx-xx'            # Format: UA-xxxxxx-xx
-#ga_domain: rushanchen.com 等上线
+ga_track_id: 'UA-133563396-1'            # Format: UA-xxxxxx-xx
+ga_domain: rushan-chen.github.io
 
 
 
