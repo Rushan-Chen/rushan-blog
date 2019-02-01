@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Codewars 03: Your order, please"
+title: "Codewars 04: Your order, please"
 subtitle: "About string & array"
 author: "Rushan"
 header-img: "img/post-bg-codewars.png"
