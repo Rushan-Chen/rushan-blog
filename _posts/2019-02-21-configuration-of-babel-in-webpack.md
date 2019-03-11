@@ -204,7 +204,7 @@ Babel 会使用小的辅助函数（helpers）来执行常见的功能，比如 
 
 【注意】实例方法，比如 `Array.prototype.includes`（`"foobar".includes("foo")`），两种 runtime 都不能转换，需要 `@babel/polyfill` 来处理。（[Array.prototype.includes 兼容情况](https://caniuse.com/#search=Array.prototype.includes)）
 
-【More】根据 Babel 的源码，其实 `@babel/polyfill` 和 `@babel/runtime-corejs2` 里的 `core-js`，用的都是第三方库[core-js](https://github.com/zloirock/core-js/tree/v2.5.7)。 [`@babel/polyfill`](https://github.com/babel/babel/blob/v7.3.0/packages/babel-polyfill/src/index.js) 用的是全局的 polyfills (`require('core-js')`)；`@babel/runtime-corejs2` 用的是模块化的 polyfills （`require('core-js/library')`）。后者的优点就是不会污染全局命名空间。
+【More】根据 Babel 的源码，`@babel/polyfill` 和 `@babel/runtime-corejs2` 里的 `core-js`，用的都是第三方库[core-js](https://github.com/zloirock/core-js/tree/v2.5.7)。 `@babel/polyfill` 用的是全局的 polyfills (`require('core-js')`)；`@babel/runtime-corejs2` 用的是模块化的 polyfills （`require('core-js/library')`）。后者的优点就是不会污染全局命名空间。
 
 ### 使用`@babel/runtime`
 

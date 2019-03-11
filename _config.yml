@@ -3,7 +3,7 @@ title: Rushan Blog
 SEOTitle: 陈如珊的博客 | Rushan Blog
 header-img: img/home-bg-nasa.jpg
 email: i.rushan.chen@gmail.com
-description: "Programming | 游走在编程魔法世界的小鬼头 | 陈如珊，Front-End developer | 这里是 @Rushan-Chen 的个人博客，写写我走过的魔法世界。"
+description: "Programming | 游走在编程魔法世界的小鬼 | 陈如珊，Front-End developer | 这里是 @Rushan-Chen 的个人博客，写写我走过的魔法世界。"
 keyword: "陈如珊, Rushan, Rushan Chen, Rushan-Chen, @Rushan-Chen, 陈如珊的博客, Rushan Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端"
 url: "https://rushan-chen.github.io"              # your host, for absolute URL
 baseurl: "/rushan-blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -78,7 +78,7 @@ ga_domain: rushan-chen.github.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next challenge<br>难得活着，活着多难，何不大胆尝试。"
+sidebar-about-description: "Trouble is a friend.<br>Face it, resolve it. I Promise."
 sidebar-avatar: https://ws3.sinaimg.cn/large/006tNc79gy1fzkz9niylhj30b40b4myh.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
