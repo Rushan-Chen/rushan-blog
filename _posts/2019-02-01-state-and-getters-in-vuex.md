@@ -17,7 +17,7 @@ tags:
 
 ```html
 <template>
-  <h1>Create Event, {{ $store.state.user.name }}</h1>
+  <h1>Create Event, {% raw %}{{ $store.state.user.name }}{% endraw %}</h1>
 </template>
 ```
 
