@@ -3,9 +3,9 @@ layout: post
 title: '常用命令'
 subtitle: 'About common command in linux'
 author: 'Rushan'
-header-img: 'img/post-bg-default.jpg'
-header-img-credit: 'Photo by Andy Holmes on Unsplash'
-header-img-credit-href: 'https://unsplash.com/photos/LUpDjlJv4_c'
+header-img: 'img/post-bg-universe.jpg'
+header-img-credit: ""
+header-img-credit-href: ""
 header-mask: 0.4
 tags:
   - Linux

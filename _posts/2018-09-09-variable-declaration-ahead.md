@@ -1,26 +1,26 @@
 ---
 layout: post
-title: "变量提前声明的特点"
-subtitle: "Variable declaration ahead"
-author: "Rushan"
-header-img: "img/post-bg-default.jpg"
-header-img-credit: "Photo by Andy Holmes on Unsplash"
-header-img-credit-href: "https://unsplash.com/photos/LUpDjlJv4_c"
+title: '变量提前声明的特点'
+subtitle: 'Variable declaration ahead'
+author: 'Rushan'
+header-img: 'img/post-bg-universe.jpg'
+header-img-credit: ''
+header-img-credit-href: ''
 header-mask: 0.4
 tags:
   - JavaScript
   - 变量声明
 ---
 
-由[变量提前声明的特点 — JavaScript社区](https://xugaoyang.com/post/WeN3x0NjfS) 延伸。
+由[变量提前声明的特点 — JavaScript 社区](https://xugaoyang.com/post/WeN3x0NjfS) 延伸。
 
 ## TypeError
 
 ```js
-fun1(); // TypeError: fun1 is not a function
+fun1() // TypeError: fun1 is not a function
 var fun1 = function() {
-  console.log("hello, js");
-};
+  console.log('hello, js')
+}
 ```
 
 > The `TypeError` object represents an error when a value is not of the expected type.
@@ -38,10 +38,10 @@ var fun1 = function() {
 ## ReferenceError
 
 ```js
-fun2(); // ReferenceError: fun2 is not defined
+fun2() // ReferenceError: fun2 is not defined
 let fun2 = function() {
-  console.log("hello, js");
-};
+  console.log('hello, js')
+}
 ```
 
 > The `ReferenceError` object represents an error when a non-existent variable is referenced.

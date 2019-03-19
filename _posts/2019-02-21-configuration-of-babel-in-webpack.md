@@ -3,10 +3,10 @@ layout: post
 title: "Webpack 中配置 Babel"
 subtitle: "About Configuration of babel in webpack"
 author: "Rushan"
-header-img: "img/post-bg-default-blue.jpg"
-header-img-credit: "Photo by Matteo Fusco on Unsplash"
-header-img-credit-href: "https://unsplash.com/photos/m94kn8Rp61Q"
-header-mask: 0.4
+header-img: "img/post-bg-webpack-babel.png"
+header-img-credit: ""
+header-img-credit-href: ""
+header-mask: 0.5
 tags:
   - Webpack
   - Babel

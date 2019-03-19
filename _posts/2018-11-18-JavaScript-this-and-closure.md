@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "JavaScript的this、闭包"
-subtitle: "About this and closure"
-author: "Rushan"
-header-img: "img/post-bg-default.jpg"
-header-img-credit: "Photo by Andy Holmes on Unsplash"
-header-img-credit-href: "https://unsplash.com/photos/LUpDjlJv4_c"
+title: 'JavaScript的this、闭包'
+subtitle: 'About this and closure'
+author: 'Rushan'
+header-img: 'img/post-bg-universe.jpg'
+header-img-credit: ''
+header-img-credit-href: ''
 header-mask: 0.4
 tags:
   - JavaScript
@@ -13,7 +13,7 @@ tags:
   - this
 ---
 
-由[闭包 — JavaScript社区](https://xugaoyang.com/post/7jqi00qvjf)延伸。
+由[闭包 — JavaScript 社区](https://xugaoyang.com/post/7jqi00qvjf)延伸。
 
 分析代码前，先了解一下`this`是啥。
 
@@ -32,23 +32,23 @@ tags:
 ```js
 // --- 非严格模式 ---
 function thisNonstrict() {
-  return this;
+  return this
 }
-console.log(thisNonstrict() === global); // node环境，true
+console.log(thisNonstrict() === global) // node环境，true
 // console.log(thisNonstrict() === window); // 浏览器环境，true
 
 // --- 严格模式 ---
 function thisStrict() {
-  "use strict";
-  return this;
+  'use strict'
+  return this
 }
-console.log(thisStrict() === undefined); // node环境，true
+console.log(thisStrict() === undefined) // node环境，true
 // console.log(thisStrict() === undefined); // 浏览器环境，true
 // console.log(window.thisStrict() === window); // 浏览器环境，true
 
 // --- 全局对象与全局变量 ---
-var name = "The Window";
-console.log(this.name);
+var name = 'The Window'
+console.log(this.name)
 // -> undefined  node环境，name不是全局对象global的属性
 // -> "The Window"  浏览器环境，name是全局对象window的属性
 ```
@@ -61,27 +61,27 @@ console.log(this.name);
 
 ```js
 // sample1
-var name = "The Window";
+var name = 'The Window'
 var object = {
-  name: "My Object",
+  name: 'My Object',
   getNameFunc: function() {
     return function() {
-      return this.name;
-    };
+      return this.name
+    }
   }
-};
+}
 
-console.log(object.getNameFunc()());
+console.log(object.getNameFunc()())
 ```
 
 要打印`object.getNameFunc()()`，先是找`object.getNameFunc`，是对象的方法，用`()`调用该方法，会`return`一个`function`，跳出对象的方法。假如给它个名字`fun`，那就相当于：
 
 ```js
-var name = "The Window";
+var name = 'The Window'
 function fun() {
-  return this.name;
+  return this.name
 }
-console.log(fun());
+console.log(fun())
 ```
 
 非严格模式下，`this`就是在函数体内部，指代函数当前的运行环境。函数`fun` 当前运行在全局环境，指向全局对象。
@@ -94,17 +94,17 @@ Q: ...`this`不是指向`object`？不要骗我，我写的代码少。
 
 ```js
 // sample1 + console.log
-var name = "The Window";
+var name = 'The Window'
 var object = {
-  name: "My Object",
+  name: 'My Object',
   getNameFunc: function() {
-    console.log(this === object); // true 对象方法的this是object
+    console.log(this === object) // true 对象方法的this是object
     return function() {
-      console.log(this === global); // 回调函数的this指向全局对象。node环境，global，true；浏览器环境，window，true
-      return this.name; // node环境，undefined; 浏览器环境，"The Window"
-    };
+      console.log(this === global) // 回调函数的this指向全局对象。node环境，global，true；浏览器环境，window，true
+      return this.name // node环境，undefined; 浏览器环境，"The Window"
+    }
   }
-};
+}
 ```
 
 Q: 为什么是指向全局对象，它不是也在`object`里吗？
@@ -121,21 +121,21 @@ Q: 为什么是指向全局对象，它不是也在`object`里吗？
 
 ```js
 // sample2
-var name = "The Window";
+var name = 'The Window'
 var object = {
-  name: "My Object",
+  name: 'My Object',
   getNameFunc: function() {
-    var that = this;
+    var that = this
     return function() {
-      return that.name;
-    };
+      return that.name
+    }
   }
-};
+}
 
-console.log(object.getNameFunc()());
+console.log(object.getNameFunc()())
 ```
 
-同上一个sample，要打印`object.getNameFunc()()`，先是`object.getNameFunc()`，调用对象的`getNameFunc`方法，会`return`一个函数，定义这个函数的时候，发现里有个`that.name`，emmm… 是谁？
+同上一个 sample，要打印`object.getNameFunc()()`，先是`object.getNameFunc()`，调用对象的`getNameFunc`方法，会`return`一个函数，定义这个函数的时候，发现里有个`that.name`，emmm… 是谁？
 
 不是当前函数自己定义的，沿着作用域链，到上级函数找，发现`that`变量，值是`this`。上级函数在`object`环境执行，`this`指向`object`。那么，`that.name`就相当于`object.name`，也就是`"My Object"`! 嗯，定义函数的时候，把找到的`that`值放进“包包”（闭包）。等被调用 ~
 
