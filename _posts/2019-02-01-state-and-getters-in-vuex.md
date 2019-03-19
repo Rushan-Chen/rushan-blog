@@ -13,15 +13,15 @@ tags:
 
 ## 访问 state
 
-### 从 template 直接访问
+### 在 template 中直接访问 `$store.state`
 
-```vue
+```html
 <template>
   <h1>Create Event, {{ $store.state.user.name }}</h1>
 </template>
 ```
 
-### 通过 computed 访问
+### 在 script 中通过 `this.$store.state` 访问
 
 ```js
 computed: {
@@ -34,13 +34,13 @@ computed: {
 }
 ```
 
-#### computed 里使用 mapState 辅助函数
+#### 在 computed 里使用 mapState 辅助函数
 
 要先从 vuex 引入 `mapState`。
 
-```vue
+```html
 <script>
-import { mapState } from 'vuex'
+  import { mapState } from 'vuex'
 </script>
 ```
 
@@ -161,9 +161,9 @@ getters: {
 
 同样，要先从 vuex 引入 mapGetters
 
-```vue
+```html
 <script>
-import { mapGetters } from 'vuex'
+  import { mapGetters } from 'vuex'
 </script>
 ```
 
