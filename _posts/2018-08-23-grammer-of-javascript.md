@@ -246,7 +246,7 @@ tags:
     - 增加元素：
         > `arr.push(element1, ..., elementN)` 
         
-        在末尾增加元素，增加多个用逗号隔开。[Array.prototype.push()][.push]
+        在末尾增加元素，增加多个用逗号隔开，返回新数组的长度。[Array.prototype.push()][.push]
 
         > `arr.unshift(element1, ..., elementN)`
 
@@ -280,12 +280,12 @@ tags:
 
     // 添加元素到数组的末尾
 
-    colorList.push('red');
+    colorList.push('red'); // 返回length属性值
     console.log('末尾增加颜色：' + colorList[colorList.length-1]); // 末尾增加颜色：red
 
     // 添加元素到数组的头部
 
-    colorList.unshift('white'); // 返回length属性：3
+    colorList.unshift('white'); // 返回length属性值
     console.log('新增第一个颜色：' + colorList[0]); // 新增第一个颜色：white
 
     // 从某索引开始插入元素

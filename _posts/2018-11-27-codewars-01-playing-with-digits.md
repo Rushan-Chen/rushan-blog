@@ -34,7 +34,7 @@ function digPow (n, k) {
     let nArray = n.toString().split('').map(v => +v);
     let leftSum = 0;
     nArray.forEach((num, index) => leftSum += Math.pow(num, p + index));
-    leftSum % n === 0 ? leftSum / n : -1;
+    return leftSum % n === 0 ? leftSum / n : -1;
 }
 ```
 
@@ -42,7 +42,7 @@ function digPow (n, k) {
 
 - `n.toString()` 可简化为`String(n)`。
 - `.map(v => +v)` 把数组里的字符串元素转换为 Number 类型，这一步可省略。因为`Math.pow(base, exponent)`有容错机制，内部会把`base`转换为 Number 类型。
-- `forEach` 换成 `reduce`，两者的比较见：[数组 forEach VS reduce](https://github.com/Rushan-Chen/JavaScript/blob/master/note/17-array-reduce.md)。`reduce` 方法可以设置累加值及其初始值，且返回值就是累计值。
+- `forEach` 换成 `reduce`，两者的比较见：[数组 forEach VS reduce](/rushan-blog/2018/11/16/compare-array-forEach-and-reduce/)。`reduce` 方法可以设置累加值及其初始值，且返回值就是累计值。
 - 对`leftSum % n === 0` 的判断可以简化为对`leftSum % n`的判断
 
 ```js
