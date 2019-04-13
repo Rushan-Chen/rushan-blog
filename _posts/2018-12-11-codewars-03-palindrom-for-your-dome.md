@@ -34,3 +34,11 @@ function palindrome(string) {
   return cleanStr === cleanStr.split('').reduceRight((sum, v) => sum + v);
 }
 ```
+
+[String.replace() - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+
+> str.replace(regexp|substr, newSubStr|function)
+> 
+> 返回值是替换后的新字符串
+
+正则表达式 `/[^A-Za-z]/g`，其中，`[]` 表示字符组，`^` 一般情况下是指文本的开始，但在字符组里表示取反，`A-Za-z` 是所有字母，正则主体后的 `g` 修饰符，是global 的缩写，表示开启全局模式，找到所有匹配的结果。

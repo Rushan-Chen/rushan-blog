@@ -54,7 +54,7 @@ obj.fun();
 
 因为执行异步回调函数时，里面的`this`指向的是全局对象，而全局对象没有`setData`方法，所以报错。（每个函数都是独立存在的，可以运行在不同的环境。函数内部的`this`，指向函数当前的运行环境。）
 
-注：不是很明白的，可以参考我的另一篇文章 [JavaScript 的 this、闭包](/2018/11/18/JavaScript-this-and-closure/)。
+注：不是很明白的，可以参考我的另一篇文章 [JavaScript 的 this、闭包](/rushan-blog/2018/11/18/JavaScript-this-and-closure/)。
 
 那怎么办？异步情况下，怎么能调用到`setData`方法?
 

@@ -61,4 +61,16 @@ function order (words) {
 
 反思：
 
-对`array.sort()`的掌握不够熟悉。`string.match()`返回的是含一个元素的数组，数组相减会进行隐性转换，转换为数字再相减。sort里的函数`compareFunction(a, b)`，返回值为负，则a会排在b前面；返回值为正，则a会排在b后面。
+对`array.sort()`的掌握不够熟悉。sort 里的函数 `compareFunction(a, b)`，返回值为负，则 a 会排在 b 前面；返回值为正，则 a 会排在 b 后面。
+
+`string.match()` 的正则参数若不带 `g` 修饰符，返回的是含一个元素的数组，数组相减会进行隐性转换，转换为数字再相减。
+
+[String.match() - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+
+> str.match(regexp)
+
+[Array.sort() - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+> arr.sort([compareFunction])
+> 
+> 对原数组的元素进行排序，返回排序后的数组
