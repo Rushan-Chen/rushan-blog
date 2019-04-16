@@ -14,7 +14,7 @@ tags:
 
 需求：抓取 CNode 精华页第一个帖子的发帖人的个人信息。
 
-思路：先从 `/api/v1/topics` 拿到精华页第一个帖子的数据，从数据里拿到做个的登录名称；再根据名称从 `/api/v1/user` 拿到用户信息。
+思路：先从 `/api/v1/topics` 拿到精华页第一个帖子的数据，从数据里拿到作者的登录名称；再根据名称从 `/api/v1/user` 拿到用户信息。
 
 实现：分别用传统 callback 写法和 Promise 写法实现，对比。
 
@@ -82,7 +82,7 @@ function readUserInfo(name) {
 readAuthorInfo()
 ```
 
-由于 axios 拿到的数据都是在 `response.data` 里，那就可以把这个提取称函数。
+由于 axios 拿到的数据都是在 `response.data` 里，那就可以把这个提取成函数。
 
 ```js
 // axios-2
