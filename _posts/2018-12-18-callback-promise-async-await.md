@@ -172,5 +172,5 @@ axios.get(url1, function (response) {
 
 详情参考：
 
-- [异步处理对比 - 有对比才更清楚技术演进的目的](https://xugaoyang.com/post/59e04f475c5425181ea1e9e0)
-- [async await promise try...catch](https://xugaoyang.com/post/59ddc711da515e18113d3c05)
+- [异步处理对比 - 有对比才更清楚技术演进的目的](https://xugaoyang.com/post/IvwK9zL2Fd)
+- [async await promise try...catch](https://xugaoyang.com/post/0ImfagEbzF)

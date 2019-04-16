@@ -152,9 +152,9 @@ then 方法就是接收一个 callback 函数，并把参数传递给 callback �
 
 `.then(name => readUserInfo(name))` 这个 then 里面的函数，只是拿到参数，把参数直接给 readUserInfo，其他什么都没做。那就没必要多一层函数啦，直接把 readUserInfo 这个函数给 then 就好了，then 会把参数传给它的。
 
-还能再优化吗？能。
+还能再优化吗？
 
-axios 返回的都是 Promise 对象。试试写成链式调用，而不是嵌套调用。也让函数更“纯”。
+axios 返回的都是 Promise 对象。试试写成链式调用。
 
 ```js
 // axios-4
@@ -181,20 +181,36 @@ readAuthorName()
   .then(readUserInfo)
   .then(data => console.log(data.data))
   .catch(console.log)
-// 语义化：拿到作者名称 -> 拿到作者信息 -> 打印作者信息 -> 错误处理兜底
 ```
 
-不用再给一个 callback 函数，不用关心需要给几个参数，不用给每个 callback 函数做错误处理。比起嵌套调用，链式调用更加语义化，更容易理解。更纯的函数也容易维护。
+链式调用是不是干净帅气？
 
-## 补充：如果返回值非 Promise，怎么改？
+如果 readAuthorName 和 readUserInfo 之间没有嵌套关系的话，是可以链式调用的。但如果它们之间有嵌套关系，2 个异步函数拿到结果的时间先后是不确定的，如果前一个异步函数还没返回结果，第二个异步函数就执行了，那就会 error。
 
-new 一个 Promise 对象，把函数塞到 Promise 对象的肚子里。
+嵌套问题，要交给 async/await 来解决。把上面的链式调用换成：
 
 ```js
-// 想实现链式调用，但readFile返回值不是promise
+// axios-5
+async function readAuthorInfo() {
+  try {
+    let name = await readAuthorName()
+    let userInfo = await readUserInfo(name)
+    console.log(userInfo.data)
+  } catch (err) {
+    console.log(err)
+  }
+}
+```
+
+## 补充：如果返回值非 Promise，怎么办？
+
+new 一个 Promise 对象，把异步函数塞到 Promise 对象的肚子里。
+
+```js
+// 想实现一个链式调用，但其中的 readFile 返回值不是 Promise
 readFile()
-  .readAuthorName()
-  .then(readUserInfo)
+  .asyncFun1()
+  .then(asyncFun2)
   .then(console.log)
   .catch(console.log)
 ```
@@ -213,5 +229,3 @@ function readFile() {
   })
 }
 ```
-
-改造之后返回值是 Promise，这样就可以链式调用了~
