@@ -185,21 +185,20 @@ readAuthorName()
 
 链式调用是不是干净帅气？
 
-如果 readAuthorName 和 readUserInfo 之间没有嵌套关系的话，是可以链式调用的。但如果它们之间有嵌套关系，2 个异步函数拿到结果的时间先后是不确定的，如果前一个异步函数还没返回结果，第二个异步函数就执行了，那就会 error。
+如果 readAuthorName 和 readUserInfo 之间没有嵌套关系的话，是可以直接链式调用的。但如果它们之间有嵌套关系，2 个异步函数拿到结果的时间先后是不确定的，如果前一个异步函数还没返回结果，第二个异步函数就执行了，那就会 error。
 
-嵌套问题，要交给 async/await 来解决。把上面的链式调用换成：
+嵌套问题，要交给 async/await 来解决。
 
 ```js
 // axios-5
 async function readAuthorInfo() {
-  try {
-    let name = await readAuthorName()
-    let userInfo = await readUserInfo(name)
-    console.log(userInfo.data)
-  } catch (err) {
-    console.log(err)
-  }
+  let name = await readAuthorName()
+  let userInfo = await readUserInfo(name)
+  return userInfo.data
 }
+readAuthorInfo()
+  .then(console.log)
+  .catch(console.log)
 ```
 
 ## 补充：如果返回值非 Promise，怎么办？
